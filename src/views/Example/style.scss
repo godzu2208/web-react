@@ -1,0 +1,93 @@
+.App {
+    text-align: center;
+  }
+  
+  .App-logo {
+    height: 10vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo-spin{
+      animation: App-logo infinite 10s linear;
+    }
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(360deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+  .btnClick{
+    margin: 2px 20px 50px;
+  }
+  .btn{
+    margin: 20px;
+    height: 40px;
+    width: 200px;
+    border: none;
+    border-radius: 10px;
+    background:#cc4a4a;
+    color: #fff;
+    font-weight: bold;
+  }
+  .btn a{
+
+    padding: 20px 40px;
+    text-decoration: none;
+    color: #fff;
+
+  }
+
+  .btn:hover{
+    background: #de8c8c;
+    cursor: pointer;
+  }
+
+  .f-sub{
+    height: 32px;
+    width: 100px;
+    border: none;
+    margin: 20px;
+    border-radius: 10px;
+    background:#cc4a4a;
+    color: #fff;
+    font-weight: bold;
+  }
+  .f-sub:hover{
+    background: #de8c8c;
+    cursor: pointer;
+  }
+
+.showhidebtn{
+  margin: 20px;
+  height: 40px;
+  width: 200px;
+  border: none;
+  border-radius: 10px;
+  background:#cc4a4a;
+  color: #fff;
+  font-weight: bold;
+}
+.showhidebtn:hover{
+  cursor: pointer;
+  background: #de8c8c;
+}

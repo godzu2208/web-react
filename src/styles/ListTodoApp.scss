@@ -1,0 +1,81 @@
+.List-Todo{
+    padding: 20px;
+    background: #fff;
+    color:hwb(0 0% 100%);
+    max-width: 540px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 10px;
+
+    .row{
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 30px;
+        padding-left: 20px;
+        margin-bottom: 25px;
+        background:#edeef0;
+        .textInput{
+            border: none;
+            outline: none;
+            background:#edeef0;
+            background: transparent;
+            padding: 10px;
+            flex: 1;
+        }
+        .btn-add{
+            border: none;
+            background: rgb(249, 104, 51);
+            padding: 10px 20px;
+            outline: none;
+            font-size: 12px;
+            border-radius: 30px;
+            cursor: pointer;
+            color: #fff;
+            font-weight: bold !important;
+        }
+        
+    }
+    .list-todo-content{
+        input{
+            height: 20px;
+            width: 300px;
+            // max-width: 300px;
+        }
+        .todo-list{
+            height: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 30px;
+            padding-left: 30px;
+
+            .btn-edit{
+                border: none;
+                background: rgb(25, 130, 69);
+                padding:0px 10px;
+                outline: none;
+                font-size: 14px;
+                border-radius: 8px;
+                cursor: pointer;
+                color: #fff;
+                font-weight: 600;
+                margin: 0px 4px;
+            }
+            .btn-delete{
+                border: none;
+                background: rgb(25, 130, 69);
+                padding:0px 10px;
+                outline: none;
+                font-size: 14px;
+                border-radius: 8px;
+                cursor: pointer;
+                color: #fff;
+                font-weight: 600 ;
+            }
+        }
+        
+    }
+}
+
