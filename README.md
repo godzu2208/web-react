@@ -73,5 +73,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 git init \
 git add .\
 git commit -m "commit files"\
-git remote add origin https://github.com/godzu2208/web-react.git\
+git remote add origin https://github.com/godzu2208/web-react.git  \
 git push -u origin master 
