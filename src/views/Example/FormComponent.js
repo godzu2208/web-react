@@ -1,6 +1,7 @@
 import React from "react";
-import './style.scss';
-
+import '../App.scss';
+import { toast } from 'react-toastify';
+import ColorComponent from "../HOC/ColorComponent";
 class FormComponent extends React.Component {
     // key : value
     /**
@@ -41,7 +42,7 @@ class FormComponent extends React.Component {
             alert("Please enter value");
             return;
         }
-        console.log('>>> check state: ', this.state);
+        // console.log('>>> check state: ', this.state);
         this.props.addNewUser({
             id: this.state.id,
             position: this.state.position,
@@ -54,7 +55,7 @@ class FormComponent extends React.Component {
             salary: '',
         });
         // console.log(users)
-
+        toast.success("Submit Success")
     };
 
 
@@ -96,4 +97,5 @@ class FormComponent extends React.Component {
     }
 }
 
-export default FormComponent;
+// export default FormComponent;
+export default ColorComponent(FormComponent);

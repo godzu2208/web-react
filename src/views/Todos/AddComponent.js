@@ -1,5 +1,5 @@
 import React from "react";
-import '../../styles/ListTodoApp.scss';
+// import '../../styles/ListTodoApp.scss';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 class AddComponent extends React.Component {

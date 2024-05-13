@@ -1,8 +1,8 @@
 import React from "react";
-import '../../styles/ListTodoApp.scss'
+// import '../../styles/ListTodoApp.scss'
 import AddComponent from "./AddComponent";
 import { toast } from 'react-toastify';
-
+import ColorComponent from "../HOC/ColorComponent";
 
 class ListTodoApp extends React.Component {
     state = {
@@ -53,15 +53,10 @@ class ListTodoApp extends React.Component {
     }
     handleClickDelete = (todo) => {
 
-        let { editTodo, listTodos } = this.state;
-        let listTodosCopy = [...listTodos];
-        let editTodoCopy = { ...editTodo };
-
-        console.log(">>>listTodosCopy :", listTodosCopy, "EditCopy :", editTodoCopy)
+        let { editTodo } = this.state;
         let isEmptyObject = Object.keys(editTodo).length === 0;
         let currentTodo = this.state.listTodos;
 
-        console.log(">>> check list :", listTodos, "check edit : ", editTodo);
         // Cancle 
         if (isEmptyObject === false && editTodo.id === todo.id) {
             this.setState({
@@ -154,4 +149,5 @@ class ListTodoApp extends React.Component {
     }
 }
 
-export default ListTodoApp;
+// export default ListTodoApp;
+export default ColorComponent(ListTodoApp);

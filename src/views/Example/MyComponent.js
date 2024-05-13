@@ -1,5 +1,5 @@
 import React from "react";
-import './style.scss';
+import '../App.scss';
 import ChildComponent from "./ChildComponent.js";
 import FormComponent from "./FormComponent.js";
 /**
@@ -27,7 +27,7 @@ class MyComponent extends React.Component {
     }
 
     addNewUser = (newuser) => {
-        console.log("check new user :", newuser)
+        // console.log("check new user :", newuser)
         let currentUser = this.state.users;
         currentUser.push(newuser);
         this.setState({
@@ -47,14 +47,14 @@ class MyComponent extends React.Component {
         });
     }
     componentDidUpdate = (preProps, prevState) => {
-        console.log('>>> run did Update: ', 'preState: ', prevState, 'currentState: ', this.state)
+        // console.log('>>> run did Update: ', 'preState: ', prevState, 'currentState: ', this.state)
     };
 
     componentDidMount() {
-        console.log('>>> run component Did Mount');
+        // console.log('>>> run component Did Mount');
     };
     render() {
-        console.log('>>> call render', this.state);
+        // console.log('>>> call render', this.state);
         // console.log('>>> checked props: ', this.props)
         return (
 

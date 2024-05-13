@@ -1,6 +1,7 @@
 import React from "react";
-import './style.scss';
-
+import '../App.scss';
+// import { toast } from "react-toastify";
+import { toast } from 'react-toastify';
 class ChildComponent extends React.Component {
     state = {
         showPositions: false,
@@ -13,8 +14,9 @@ class ChildComponent extends React.Component {
     }
     handleOnclickDeleteUser = (newuser) => {
         // alert("Delete");
-        console.log('>>>> handleOnclickDeleteUser :', newuser)
+        // console.log('>>>> handleOnclickDeleteUser :', newuser)
         this.props.deleteUsers(newuser)
+        toast.success("Deleted Success")
     }
     render() {
         // let name = this.props.name;
@@ -48,41 +50,43 @@ class ChildComponent extends React.Component {
                 {/* <span>Fullname is : {name}</span>
                 <span>Age is : {age}</span>
                 <span>Address is : {address}</span> */}
-                <h2>Positions and Salary in Company</h2>
-                {showPositions === false ?
-                    <div>
-                        <button onClick={() => this.handleShowHidePositions()} className="showhidebtn" >
-                            Show
-                        </button>
-                    </div>
-                    : // Conditional 
-                    // {/* Khi dùng điều kiện && hoặc hàm return thì các câu lệnh sau nó phải là 1 khối, có bỏ trong <></> hoặc toàn bộ trong 1 thẻ <div> */}
-
-                    <>
-                        <div className="job-positions">
-                            {
-                                a = users.map((item, index) => {
-                                    if (item.salary >= 300) {
-                                        return (
-                                            <div key={item.id}>
-                                                {item.position} --- {item.salary} $
-                                                <></> <span onClick={() => this.handleOnclickDeleteUser(item)}>X</span>
-                                            </div>
-                                        )
-                                    }
-                                    return null;
-                                })
-                            }
-                            {console.log('>>> Check map : ', a)}
-                        </div>
+                <div className="job-positions">
+                    <h2>Positions and Salary in Company</h2>
+                    {showPositions === false ?
                         <div>
-                            <button className="showhidebtn" onClick={() => this.handleShowHidePositions()}>
-                                Hide
+                            <button onClick={() => this.handleShowHidePositions()} className="showhidebtn" >
+                                Show
                             </button>
                         </div>
-                    </>
-                }
+                        : // Conditional 
+                        // {/* Khi dùng điều kiện && hoặc hàm return thì các câu lệnh sau nó phải là 1 khối, có bỏ trong <></> hoặc toàn bộ trong 1 thẻ <div> */}
 
+                        <>
+                            <div className="job-positions">
+                                {
+                                    a = users.map((item, index) => {
+                                        if (item.salary >= 300) {
+                                            return (
+                                                <div key={item.id}>
+                                                    {item.position} --- {item.salary} $
+                                                    <></> <span onClick={() => this.handleOnclickDeleteUser(item)}>X</span>
+                                                </div>
+                                            )
+                                        }
+                                        return null;
+                                    })
+                                }
+                                {console.log('>>> Check map : ', a)}
+                            </div>
+                            <div>
+                                <button className="showhidebtn" onClick={() => this.handleShowHidePositions()}>
+                                    Hide
+                                </button>
+                            </div>
+                        </>
+                    }
+
+                </div>
             </>
         )
     }
