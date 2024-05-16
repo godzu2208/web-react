@@ -2,6 +2,7 @@ import React from "react";
 import '../App.scss';
 import { toast } from 'react-toastify';
 import ColorComponent from "../HOC/ColorComponent";
+
 class FormComponent extends React.Component {
     // key : value
     /**

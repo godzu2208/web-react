@@ -6,7 +6,7 @@ import MyComponent from './Example/MyComponent';
 import ListTodoApp from './Todos/ListTodoApp';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import FormComponent from './Example/FormComponent';
+// import FormComponent from './Example/FormComponent';
 import Nav from './Navigation/Nav';
 import Home from './Example/Home';
 import Face from './Example/Face';
@@ -49,9 +49,6 @@ function App() {
               <ListTodoApp />
             </Route>
             <Route path="/form">
-              <FormComponent />
-            </Route>
-            <Route path="/about">
               <MyComponent />
             </Route>
             <Route path="/youtube">
